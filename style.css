@@ -9,6 +9,19 @@ body {
   background-position: center top;
   background-attachment: scroll;
 }
+
+.container-fluid {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: rgba(13, 59, 59, 0.55); 
+  backdrop-filter: blur(1px); 
+  -webkit-backdrop-filter: blur(1px); 
+  color: #0669bb; 
+}
+
+
 .nav-left, .nav-right {
   display: none;
 }
@@ -50,13 +63,6 @@ body {
     display: flex;
   }
 
-
-
-
-
-
-
-  /* Base hidden nav style */
 .nav-left,
 .nav-right {
   overflow: hidden;
@@ -64,13 +70,13 @@ body {
   transition: max-height 0.4s ease-in-out;
 }
 
-/* When menu is shown */
+
 .nav-left.show,
 .nav-right.show {
-  max-height: 300px; /* Adjust depending on content */
+  max-height: 300px; 
 }
 
-/* Mobile hamburger styling */
+
 @media (max-width: 768px) {
   .nav-left,
   .nav-right {
@@ -145,7 +151,7 @@ body {
   }
 }
 
-/* Ensure image in card stays inside bounds */
+
 .card img {
   width: 100%;
   height: auto;
@@ -472,9 +478,9 @@ body {
   background:linear-gradient(to right, #030913, #2a5298);
   border-radius: 2rem;
   margin: 2rem;
-  height: 380px;
+  height: 500px;
   text-align: left;
-  padding: 3rem;
+  padding: 5rem;
   box-shadow: 2px 4px 20px rgba(6, 1, 1, 0.05);
 }
 
@@ -505,8 +511,8 @@ body {
 }
 
 .wellness-coaching .image img {
-  max-width: 590px;
-  height: 472px;
+  max-width: 790px;
+  height: 665px;
   border-radius: 1rem;
   
 }
