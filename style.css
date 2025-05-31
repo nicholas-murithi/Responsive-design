@@ -21,9 +21,6 @@ body {
   color: #0669bb; 
 }
 
-
-
-
 .nav-left, .nav-right {
   display: none;
 }
@@ -31,8 +28,6 @@ body {
 .nav-left.show, .nav-right.show {
   display: block;
 }
-
-
 
 .hamburger {
   display: none;
@@ -126,10 +121,6 @@ body {
   }
 }
 
-
-
-
-
 .nav-menu {
   overflow: hidden;
   max-height: 0;
@@ -139,9 +130,6 @@ body {
 .nav-menu.show {
   max-height: 500px;
 }
-
-
-
 
   .nav-left,
   .nav-right {
@@ -168,9 +156,6 @@ body {
   border-radius: 1rem;
   max-height: 200px;
 }
-
-
-
 
 
 nav {
@@ -267,9 +252,6 @@ a {
   }
 }
 
-
-
-
 @media (max-width: 480px) {
   .nav-left, .nav-right {
     display: none;
@@ -292,9 +274,6 @@ a {
     display: flex; 
   }
 }
-
-
-
 
 
 .how-it-works {
@@ -379,10 +358,6 @@ a {
     margin-top: 2rem;
   }
 }
-
-
-
-
 
 body {
   font-family: 'Arial', sans-serif;
@@ -500,10 +475,6 @@ body {
     width: 90%; 
   }
 }
-
-
-
-
 
 
 .wellness-coaching {
@@ -643,9 +614,6 @@ body {
   }
 }
 
-
-
-
 .partners-section {
   background:linear-gradient(to right, #bbc4bc, #2a5298);
   padding: 1rem;
@@ -759,9 +727,6 @@ button.pink {
 }
 
 
-
-
-
 .community-section {
   background:linear-gradient(to right, #bbc4bc, #1e4589);
   margin: 7rem 1rem;
@@ -815,9 +780,6 @@ button.pink {
   height: 522px;
   top: 90px;
 }
-
-
-
 
 .faq-section {
   display: flex;
@@ -896,9 +858,6 @@ button.pink {
   font-size: 0.95rem;
   color: #444;
 }
-
-
-
 
 body {
   margin: 0;
@@ -1001,10 +960,6 @@ body {
 .contact-form button:hover {
   opacity: 0.9;
 }
-
-
-
-
 
 
 .footer {
