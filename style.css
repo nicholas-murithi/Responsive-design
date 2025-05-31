@@ -22,6 +22,8 @@ body {
 }
 
 
+
+
 .nav-left, .nav-right {
   display: none;
 }
@@ -61,6 +63,10 @@ body {
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    margin-left: auto;
   }
 
 .nav-left,
@@ -73,7 +79,7 @@ body {
 
 .nav-left.show,
 .nav-right.show {
-  max-height: 300px; 
+  max-height: 100px; 
 }
 
 
@@ -86,6 +92,9 @@ body {
     text-align: center;
     background: #030e22;
     padding: 1rem 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
   }
 
   .hamburger {
@@ -181,8 +190,8 @@ nav {
 
 .logo {
   font-weight: bold;
-  font-size: 3.4rem;
-  color: #c2b9eb;
+  font-size: 2.4rem;
+  color: #f7f9fb;
 }
 a {
   text-decoration: none;
@@ -191,9 +200,9 @@ a {
 }
 .hero {
   background: linear-gradient(to right, #4670ba, #0b172a);
-  margin: 3.5rem;
+  margin: 1.4rem;
   border-radius: 5rem;
-  padding: 2.5rem 2rem;
+  padding: 4.0rem 4.0rem;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -202,7 +211,7 @@ a {
 .hero h1 {
   font-size: 3.4rem;
   margin-bottom: 1rem;
-  color: #369ba2;
+  color: #faffff;
 }
 
 .hero p {
@@ -261,6 +270,32 @@ a {
 
 
 
+@media (max-width: 480px) {
+  .nav-left, .nav-right {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex; 
+  }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .nav-left, .nav-right {
+    display: flex;
+  }
+}
+
+@media (min-width: 769px) {
+  .nav-left, .nav-right {
+    display: flex; 
+  }
+}
+
+
+
+
 
 .how-it-works {
   display: flex;
@@ -290,7 +325,7 @@ a {
 .main-heading {
   font-size: 3.4rem;
   font-weight: bold;
-  color: #369ba2;
+  color: #f7fbfc;
   line-height: 1.4;
   margin-bottom: 1.5rem;
 }
@@ -367,7 +402,7 @@ body {
 .services h1 {
   font-size: 3.4rem;
   margin: 0.1rem 0;
-  color: #369ba2;
+  color: #f3f9f9;
 }
 
 .services h1 span {
@@ -408,13 +443,13 @@ body {
 .card h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: #369ba2;
+  color: #fafdfe;
 }
 
 .card p {
   font-size: 2.95rem;
   line-height: 1.6;
-  color: #010102;
+  color: #e8e8f1;
 }
 
 .card button {
@@ -491,7 +526,7 @@ body {
 
 .wellness-coaching h2 {
   font-size: 3.4rem;
-  color: #369ba2;
+  color: #fafdfd;
 }
 
 .wellness-coaching p {
@@ -525,7 +560,7 @@ body {
 
 .testimonials h2 {
   font-size: 3.4rem;
-  color: #369ba2;
+  color: #f9fdfd;
 }
 
 .subheading {
@@ -566,6 +601,7 @@ body {
 
 .card-1 {
   background:linear-gradient(to right, #bbc4bc, #2a5298);
+  color: #ffffff;
 }
 
 .card-2 {
@@ -651,7 +687,7 @@ body {
 .resources-header h2 {
   font-size: 3.5rem;
   margin: 1.5rem 1rem;
-  color: #369ba2;
+  color: #f3f8f8;
 }
 
 .resources-header p {
@@ -679,13 +715,13 @@ body {
 
 .card h3 {
   margin-bottom: 2rem;
-  color: #369ba2;
+  color: #f5fafa;
   font-size: 2.4rem;
 }
 
 .card p {
   font-size: 1.3rem;
-  color: #1c3246;
+  color: #0d0d0e;
   margin-bottom: 1.5rem;
 }
 
@@ -753,7 +789,7 @@ button.pink {
 .community-content h2 {
   font-size: 3.4rem;
   margin: 0.5rem 0;
-  color: #369ba2;
+  color: #070707;
 }
 
 .community-content p {
@@ -807,7 +843,7 @@ button.pink {
 .faq-left h2 {
   font-size: 3.4rem;
   margin: 0;
-  color: #369ba2;
+  color: #f1f6f7;
 }
 
 .faq-left p {
@@ -847,7 +883,7 @@ button.pink {
   justify-content: space-between;
   align-items: center;
   font-weight: bold;
-  color: #0d3b3b;
+  color: #090909;
 }
 
 .toggle-icon {
@@ -885,7 +921,7 @@ body {
 .contact-header h2 {
   font-size: 3.4rem;
   margin: 0.5rem 0;
-  color: #369ba2;
+  color: #f5f9fa;
 }
 
 .contact-header p {
@@ -915,7 +951,7 @@ body {
 .contact-details h3,
 .contact-form h3 {
   margin-bottom: 1rem;
-  color: #17555a;
+  color: #0b0b0b;
 }
 
 .social-icons a {
@@ -947,7 +983,7 @@ body {
   padding: 0.75rem;
   margin-bottom: 1rem;
   border: none;
-  border-bottom: 2px solid #0d3b3b;
+  border-bottom: 2px solid #0c0d0d;
   background: transparent;
   font-size: 1rem;
 }
@@ -993,7 +1029,7 @@ body {
 
 .footer-left-card h3 {
   font-size: 1.75rem;
-  color: #438aa4;
+  color: #0d0d0d;
   margin-bottom: 1rem;
 }
 
@@ -1103,7 +1139,4 @@ body {
   margin-left: 0;           
   padding-left: 0;     
 }
-
-
-
 
