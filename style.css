@@ -15,10 +15,10 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: rgba(13, 59, 59, 0.55); 
+  background-color: rgba(66, 98, 114, 0.55); 
   backdrop-filter: blur(1px); 
   -webkit-backdrop-filter: blur(1px); 
-  color: #0669bb; 
+  color: #379898; 
 }
 
 .nav-left, .nav-right {
@@ -220,13 +220,15 @@ a {
   position: absolute;
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .hero::before {
   background-image: url('images/left-illustration.png'); 
   top: 0;
   left: -160px;
-  width: 480px;
+  width: 580px;
   height: 100%;
 }
 .hero::after {
@@ -237,6 +239,30 @@ a {
   height: 100%;
 }
 
+@media (max-width: 768px) {
+  .hero::before {
+    top: auto;
+    left: -10px;
+    bottom: 10px;
+    width: 200px;
+    height: 100px;
+    background-size: contain;
+  }
+
+  .hero::after {
+    right: 0;
+    bottom: 10px;
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+  }
+}
+
+
+.card, .hero-content {
+  position: relative;
+  z-index: 1;
+}
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 1.75rem;
@@ -486,7 +512,7 @@ body {
   margin: 2rem;
   height: 500px;
   text-align: left;
-  padding: 5rem;
+  padding: 2rem;
   box-shadow: 2px 4px 20px rgba(6, 1, 1, 0.05);
 }
 
@@ -496,12 +522,12 @@ body {
 }
 
 .wellness-coaching h2 {
-  font-size: 3.4rem;
+  font-size: 3.3rem;
   color: #fafdfd;
 }
 
 .wellness-coaching p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #c9bebe;
   margin: o.5rem 1.5rem;
 }
@@ -518,10 +544,12 @@ body {
 
 .wellness-coaching .image img {
   max-width: 790px;
-  height: 665px;
+  width: 100%;
+  height: 565px;
   border-radius: 1rem;
   
 }
+
 
 
 .testimonials {
@@ -620,25 +648,34 @@ body {
   margin: 3rem;
   border-radius: 2rem;
   text-align: center;
+  overflow-x: hidden;
 }
 
 .partners-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items:center;
   gap: 6rem;
-  flex-wrap: wrap;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; 
+  width: 100%;
+  max-width: 100%;
 }
 
 .partners-container span {
   font-weight: bold;
   color: #0b1b1b;
   font-size: 20px;
+  flex-shrink: 0;
 }
 
 .partners-container img {
   height: 60px;
   object-fit: contain;
+  flex-shrink: 0;                 
+  scroll-snap-align: start;
 }
 
 .resources-section {
@@ -752,8 +789,8 @@ button.pink {
 }
 
 .community-content h2 {
-  font-size: 3.4rem;
-  margin: 0.5rem 0;
+  font-size: 3.2rem;
+  margin:  0;
   color: #070707;
 }
 
@@ -781,6 +818,11 @@ button.pink {
   top: 90px;
 }
 
+@media (max-width: 768px) {
+  .community-image img {
+    display: none;          
+  }
+}
 .faq-section {
   display: flex;
   flex-wrap: wrap;
@@ -973,7 +1015,7 @@ body {
 
 .footer-left-card {
   flex: 1;
-  min-width: 350px;
+  min-width: 250px;
   background:linear-gradient(to right, #bbc4bc, #1e4589);
   border-radius: 1.5rem;
   padding: 2rem;
@@ -1015,7 +1057,7 @@ body {
 
 .footer-right {
   flex: 1;
-  min-width: 350px;
+  min-width: 250px;
   
 }
 
