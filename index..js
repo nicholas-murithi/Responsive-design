@@ -1,6 +1,7 @@
 function toggleMenu() {
   document.querySelector('.nav-left').classList.toggle('show');
   document.querySelector('.nav-right').classList.toggle('show');
+  document.querySelector('.hamburger').classList.toggle('active');
 }
 document.querySelectorAll('.faq-item').forEach(item => {
   const question = item.querySelector('.faq-question');
@@ -59,5 +60,13 @@ currentIndex = (currentIndex + 1) % testimonials.length;
 showTestimonial(currentIndex);
 });
 
+  const container = document.querySelector('.partners-container');
+  function autoScroll() {
+    container.scrollLeft += 1;
+    if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
+      container.scrollLeft = 0;
+    }
+  }
+  setInterval(autoScroll, 20); 
 
 showTestimonial(currentIndex);
